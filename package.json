@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^7.14.5",
     "@react-navigation/stack": "^7.8.5",
     "expo": "~55.0.6",
+    "expo-checkbox": "^55.0.4",
     "expo-constants": "~55.0.7",
     "expo-status-bar": "~55.0.4",
     "prop-types": "^15.8.1",
