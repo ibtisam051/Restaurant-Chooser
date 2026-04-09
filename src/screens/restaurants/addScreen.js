@@ -172,8 +172,11 @@ return (
                     </Picker>
                 </View>
                 {restaurant.errors.delivery && <Text style={{color: "red", marginLeft: 10, marginBottom: 10}}>{restaurant.errors.delivery}</Text>}   
-                <CustomButton title="Cancel" onPress={() => navigation.goBack()} buttonStyle={styles.cancelButton} />
-                <CustomButton title="Save" onPress={saveRestaurant} buttonStyle={styles.saveButton} />
+                
+                <View style={styles.addScreenButtonContainer}>
+                    <CustomButton title="Cancel" onPress={() => navigation.goBack()} buttonStyle={styles.cancelButton} />
+                    <CustomButton title="Save" onPress={saveRestaurant} buttonStyle={styles.saveButton} />
+                </View>
             </View>
         </View>
     </ScrollView>
@@ -189,7 +192,8 @@ const styles = StyleSheet.create({
     },
     addScreenFormContainer: {width: "96%"},
     fieldlabel: {
-        marginLeft: 10,},
+        marginLeft: 10,
+    },
     pickerContainer: {
         ...Platform.select({
             ios: {},
@@ -220,11 +224,18 @@ const styles = StyleSheet.create({
     },
     addScreenButtonContainer: {
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         marginTop: 20,
+        gap: 12,
     },
-    cancelButton: {backgroundColor: "gray", width: "44%"},
-    saveButton: {backgroundColor: "green", width: "44%"},
+    cancelButton: {
+        backgroundColor: "gray",
+        flex: 1,
+    },
+    saveButton: {
+        backgroundColor: "green",
+        flex: 1,
+    },
 });
-
+    
 export default AddScreen;

@@ -67,6 +67,10 @@ const AddScreen = ({ navigation }) => {
         }
     };
 
+    const cancel = () => {
+        navigation.goBack();
+    };
+
     return (
         <ScrollView>
             <View style={styles.AddScreenInnerContainer}>
@@ -89,7 +93,14 @@ const AddScreen = ({ navigation }) => {
                         onChangeText={(text) => setField("email", text)}
                         error={person.errors.email}
                     />
-                    <CustomButton title="Save Person" onPress={savePerson} />
+                    <View style={styles.buttonContainer}>
+                        <View style={styles.buttonWrapper}>
+                            <CustomButton title="Save" onPress={savePerson} />
+                        </View>
+                        <View style={styles.buttonWrapper}>
+                            <CustomButton title="Cancel" onPress={cancel} />
+                        </View>
+                    </View>
                 </View>
             </View>
         </ScrollView>
@@ -103,6 +114,15 @@ const styles = StyleSheet.create({
     },
     addScreenFormContainer: {
         marginBottom: 20,
+    },
+    buttonContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 20,
+        gap: 10,
+    },
+    buttonWrapper: {
+        flex: 1,
     },
 });
 
