@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TouchableOpacity, Image, Alert, Platform } from "react-native";
+import { View, StyleSheet, Image, Alert, Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import CustomButton from "../../components/CustomButton";
 
 const decisionImage = Platform.select({
   ios: require("../../../assets/its-decision-time.ios.png"),
@@ -36,9 +37,10 @@ const DecisionTimeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handleStart} activeOpacity={0.8} style={styles.imageContainer}>
+      <View style={styles.imageContainer}>
         <Image source={decisionImage} style={styles.image} resizeMode="contain" />
-      </TouchableOpacity>
+      </View>
+      <CustomButton title="Start Decision" onPress={handleStart} />
     </View>
   );
 };
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: "100%",
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 40,
   },
   image: {
     width: 260,
