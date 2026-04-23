@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 const PeopleScreen = () => {
     return (
         <Stack.Navigator initialRouteName="PeopleList">
-            <Stack.Screen name="PeopleList" component={ListScreen} />
+            <Stack.Screen name="PeopleList" component={ListScreen} options={{ headerShown: false }} />
             <Stack.Screen name="PeopleAdd" component={AddScreen} />
         </Stack.Navigator>
     );

@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 const RestaurantsScreen = () => {
     return (
         <Stack.Navigator initialRouteName="RestaurantsList">
-            <Stack.Screen name="RestaurantsList" component={ListScreen} />
+            <Stack.Screen name="RestaurantsList" component={ListScreen} options={{ headerShown: false }} />
             <Stack.Screen name="RestaurantsAdd" component={AddScreen} />
         </Stack.Navigator>
     );

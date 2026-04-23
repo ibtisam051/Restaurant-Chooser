@@ -1,93 +1,130 @@
-# Restaurant Chooser App
+# 🍽️ Restaurant Chooser App
 
-A simple Expo React Native app for choosing restaurants and managing people.
+A simple **Expo React Native** application that helps users choose restaurants and manage people involved in the decision-making process.
 
-## Run locally
+---
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+## 📱 Features
 
-2. Start the Expo dev server:
-   ```bash
-   npm start
-   ```
+* Add and manage people
+* Browse and select restaurants
+* Simple decision-making flow
+* Clean and beginner-friendly UI
 
-3. Open the app:
-   - Scan the QR code with Expo Go on a phone, or
-   - Run `npm run android` or `npm run ios` if you have a simulator/emulator.
+---
 
-## Publishing with Expo
+## 🚀 Run Locally
 
-To make the app available to others without keeping your machine running:
-
-1. Create an Expo account at https://expo.dev/
-2. Login from the project folder:
-   ```bash
-   npx expo login
-   ```
-3. Publish the app:
-   ```bash
-   npx expo publish
-   ```
-
-If `expo` is not recognized, install the Expo CLI:
+### 1. Install dependencies
 
 ```bash
-npm install -g expo-cli
+npm install
 ```
 
-That makes the app available via Expo's web service so others can access it via the published URL.
-
-## Building a native package with EAS
-
-This repo includes `eas.json` for EAS builds.
-
-1. Install the EAS CLI if needed:
-   ```bash
-   npm install -g eas-cli
-   ```
-
-2. Or run directly with npx:
-   ```bash
-   npx eas login
-   ```
-
-3. Login to Expo/EAS:
-   ```bash
-   npx eas login
-   ```
-
-4. Run a production build:
-   ```bash
-   npx eas build --platform all --profile production
-   ```
-
-If `eas` is not recognized, install the CLI globally:
+### 2. Start the Expo development server
 
 ```bash
-npm install -g eas-cli
+npm start
 ```
 
-5. When the build completes, copy the build artifact link here:
-   - Build artifact link: _paste your finished build URL here_
+### 3. Open the app
 
-## Published app links
+* Scan the QR code using **Expo Go** on your phone
+  **OR**
+* Run on emulator:
 
-- Expo published URL: _paste your expo publish URL here_
-- EAS build artifact URL: _paste your finished build URL here_
+```bash
+npm run android
+npm run ios
+```
 
-## Project files
+---
 
-- `App.js` — root app entry point.
-- `app.json` — Expo project config.
-- `eas.json` — EAS build profiles.
-- `src/screens/people` — people screens.
-- `src/screens/restaurants` — restaurant screens.
-- `src/screens/decision` — decision flow screens.
+## 🌐 Publish with Expo
 
-## Notes
+To share your app without running a local server:
 
-- Push `eas.json` to GitHub so the build config is tracked.
-- Include the published Expo URL or EAS build artifact link in the repo README when available.
+### 1. Create an Expo account
+
+https://expo.dev/
+
+### 2. Login
+
+```bash
+npx expo login
+```
+
+### 3. Publish the app
+
+```bash
+npx expo publish
+```
+
+---
+
+## 📦 Build APK with EAS (Android Only)
+
+Since iOS requires an Apple Developer account, this project uses **Android-only build**.
+
+### 1. Login to EAS
+
+```bash
+npx eas login
+```
+
+### 2. Run production build (Android only)
+
+```bash
+npx eas build --platform android --profile production
+```
+
+---
+
+## 📥 Build Artifact
+
+Download and install the APK:
+
+👉 https://expo.dev/artifacts/eas/wFMZovB2n7i1x2UXR58JPQ.apk
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── App.js                      # Root entry point
+├── app.json                    # Expo configuration
+├── eas.json                    # EAS build configuration
+├── src/
+│   ├── screens/
+│   │   ├── people/             # People management screens
+│   │   ├── restaurants/        # Restaurant selection screens
+│   │   └── decision/           # Decision flow screens
+```
+
+---
+
+## 📌 Notes
+
+* The `eas.json` file is included and pushed to GitHub for build configuration.
+* This project is built using Expo and EAS for easy deployment.
+* Only Android build is configured (no Apple ID required).
+
+---
+
+## 📎 Submission
+
+* ✅ Public GitHub Repository (with this README)
+* ✅ Expo Build Artifact (APK link above)
+
+---
+
+## 👨‍💻 Author
+
+**Ibtisam Ahmed**
+
+---
+
+## 📄 License
+
+This project is for educational purposes.

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image, Alert, Platform } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Image, Alert, Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import CustomButton from "../../components/CustomButton";
 
 const decisionImage = Platform.select({
   ios: require("../../../assets/its-decision-time.ios.png"),
@@ -37,17 +36,9 @@ const DecisionTimeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headline}>Decision Time</Text>
-      <Text style={styles.description}>
-        Tap the food image to start the restaurant choosing process.
-      </Text>
       <TouchableOpacity onPress={handleStart} activeOpacity={0.8} style={styles.imageContainer}>
         <Image source={decisionImage} style={styles.image} resizeMode="contain" />
       </TouchableOpacity>
-      <CustomButton title="Start" onPress={handleStart} disabled={loading} width="94%" />
-      <Text style={styles.tip}>
-        The app checks whether you have saved people and restaurants before continuing.
-      </Text>
     </View>
   );
 };
@@ -59,17 +50,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 20,
   },
-  headline: {
-    fontSize: 32,
-    fontWeight: "bold",
-    marginBottom: 20,
-    textAlign: "center",
-  },
-  description: {
-    fontSize: 18,
-    textAlign: "center",
-    marginBottom: 20,
-  },
   imageContainer: {
     width: "100%",
     alignItems: "center",
@@ -78,12 +58,6 @@ const styles = StyleSheet.create({
   image: {
     width: 260,
     height: 260,
-  },
-  tip: {
-    marginTop: 14,
-    fontSize: 16,
-    color: "#555",
-    textAlign: "center",
   },
 });
 
